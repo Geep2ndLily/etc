@@ -10,3 +10,6 @@ project :
 
 libev :
 	@ctags -I EV_THROW --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q --languages=c,c++ -R ./
+
+kernel :
+	@ctags -I __THROW -I __attribute_pure__ -I __nonnull -I __attribute__ --langmap=c:+.h --languages=c --c-kinds=+p --fields=+iaS --extra=+q -R ./
