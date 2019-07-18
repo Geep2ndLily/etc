@@ -7,3 +7,6 @@ c++ :
 
 project :
 	@ctags --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q --languages=c,c++ -R ./
+
+libev :
+	@ctags -I EV_THROW --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q --languages=c,c++ -R ./
