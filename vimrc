@@ -13,6 +13,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
     "Plug 'junegunn/vim-easy-align'
+    Plug 'vim-scripts/OmniCppComplete'
 call plug#end()
 
 
@@ -28,15 +29,20 @@ set fileformats=unix,dos
 set fileencodings=ucs-bom,utf-8,prc,taiwan,latin1
 set expandtab
 set shiftround
-set autoindent
 set shiftwidth=4
 set softtabstop=4
 set backspace=indent,eol,start
 
+set autoindent
 set cinoptions+=g0
 
+set path+=/usr/include/c++/**
+
+set tags=./tags;
+set tags+=~/mytags/systags
+set tags+=~/mytags/cpp
+
 syntax enable
-"loadview
 
 inoremap <C-A> <Home>
 inoremap <C-E> <End>
@@ -44,6 +50,8 @@ inoremap <C-B> <Left>
 inoremap <C-J> <Down>
 inoremap <C-K> <Up>
 inoremap <C-L> <Right>
+
+map <F12> :!ctags --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q --languages=c,c++ -R ./<CR>
 
 iab st <C-r>=strftime("%Y-%m-%d %H:%M:%S")<CR>
 
