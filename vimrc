@@ -51,7 +51,7 @@ inoremap <C-J> <Down>
 inoremap <C-K> <Up>
 inoremap <C-L> <Right>
 
-map <F12> :!ctags --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q --languages=c,c++ -R ./<CR>
+nmap <F12> :!ctags --c-kinds=+p --c++-kinds=+p --fields=+iaS --extra=+q --languages=c,c++ -R ./<CR>
 
 iab st <C-r>=strftime("%Y-%m-%d %H:%M:%S")<CR>
 
